@@ -1,0 +1,28 @@
+%YAML 1.2
+---
+name: Heptagon
+file_extensions: [ept, epi]
+scope: source.heptagon
+
+contexts:
+  main:
+    # Declarations / Definitions
+    - match: \b(const|fun|inlined|let|node|open|returns|tel|var)\b
+      scope: keyword.declaration.heptagon
+
+    # Built-in types
+    - match: \b(bool|int|float)\b
+      scope: storage.type.heptagon
+
+    # Keywords / Controls
+    - match: \b(a(?:ssume|utomaton)|cont(?:inue|ract)|d(?:efault|o(?:ne)?)|e(?:lse|n(?:d|force)|very)|f(?:by|oldi?)|i[fn]|last|m(?:ap(?:foldi?|i)?|erge)|on(?:ot)?|pre|reset|s(?:tate|witch)|not|then|un(?:less|til)|w(?:hen(?:ot)?|ith))\b
+      scope: keyword.control.heptagon
+
+    # Comments
+    - match: \(\*
+      scope: punctuation.definition.comment.begin.heptagon
+      push:
+        - meta_scope: comment.block.heptagon
+        - match: \*\)
+          scope: punctuation.definition.comment.end.heptagon
+          pop: true
