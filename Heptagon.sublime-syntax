@@ -15,7 +15,7 @@ contexts:
       scope: storage.type.heptagon
 
     # Keywords / Controls
-    - match: \b(a(?:ssume|utomaton)|cont(?:inue|ract)|d(?:efault|o(?:ne)?)|e(?:lse|n(?:d|force)|very)|f(?:by|oldi?)|i[fn]|last|m(?:ap(?:foldi?|i)?|erge)|on(?:ot)?|pre|reset|s(?:tate|witch)|not|then|un(?:less|til)|w(?:hen(?:ot)?|ith))\b
+    - match: \b(a(?:ssume|utomaton)|cont(?:inue|ract)|d(?:efault|o(?:ne)?)|e(?:lse|n(?:d|force)|very)|f(?:by|oldi?)|i[fn]|last|m(?:ap(?:foldi?|i)?|erge)|on(?:ot)?|pre(?:sent)|reset|s(?:tate|witch)|not|then|un(?:less|til)|w(?:hen(?:ot)?|ith))\b
       scope: keyword.control.heptagon
 
     # Comments
